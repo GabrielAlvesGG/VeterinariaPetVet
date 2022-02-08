@@ -17,10 +17,22 @@ namespace petVet.Controllers
         [HttpPost]
         public IActionResult CadastroCliente(Cliente cliente)
         {   
+            
             ClienteRepository cr = new ClienteRepository();
-            cr.Inserir(cliente);
-            ViewBag.Mensagem = "Cadastro Efetuado com Sucesso!";
-            return View();
+         
+            Cliente cadastradoExistente = cr.ValidarCadastro(cliente);
+            
+            if(cadastradoExistente == null)
+            {   
+                cr.Inserir(cliente);
+                ViewBag.Mensagem = "Cadastro Efetuado com sucesso";
+                return RedirectToAction("LoginCliente"); 
+            }
+            else
+            {   
+                ViewBag.MEnsagem = "Erro ao cadastrar! Login existente";
+                return View();
+            }         
         }
         public IActionResult ListaClientes(Cliente cliente)
         {   

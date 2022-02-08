@@ -159,5 +159,35 @@ namespace petVet.Models
             conexao.Close();
             return clienteLogado;
         }
+        public Cliente ValidarCadastro(Cliente cliente)
+        {
+            MySqlConnection conexao = new MySqlConnection(conectaDados);
+            conexao.Open();
+            string query = "SELECT * FROM cliente WHERE login=@login";
+            MySqlCommand comando = new MySqlCommand(query,conexao);
+            comando.Parameters.AddWithValue("@login", cliente.login );
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            Cliente clienteValidar = null;
+
+            if(reader.Read())
+            {      
+                clienteValidar = new Cliente();
+                clienteValidar.id = reader.GetInt32("id");
+
+                if(!reader.IsDBNull(reader.GetOrdinal("nome")))
+                clienteValidar.nome = reader.GetString("nome");
+
+                clienteValidar.dataNascimento = reader.GetDateTime("dataNascimento");
+
+                if(!reader.IsDBNull(reader.GetOrdinal("login")))
+                clienteValidar.login = reader.GetString("login");
+
+                if(!reader.IsDBNull(reader.GetOrdinal("senha")))
+                clienteValidar.senha = reader.GetString("senha");
+            }
+            conexao.Close();
+            return clienteValidar ;
+        }
     }
 }
