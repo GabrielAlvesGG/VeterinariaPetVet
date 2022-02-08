@@ -1,0 +1,20 @@
+@model Cliente
+
+<h1>Login Cliente</h1>
+
+<p>Faça o login para ver as listas de Clientes</p>
+
+<form method="POST" asp-action="LoginCliente">
+    <p>
+        <label asp-for="login">Login:</label>
+        <input type="text" asp-for="login" placeholder="login" required>
+    </p>
+    <p>
+        <label asp-for="senha">Senha:</label>
+        <input type="password" asp-for="senha" placeholder="Senha" required>
+    </p>
+    <p>
+        <input type="submit" value="Logar">
+    </p>
+</form>
+@ViewBag.Mensagem

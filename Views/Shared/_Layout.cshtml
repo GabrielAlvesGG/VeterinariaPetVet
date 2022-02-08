@@ -1,0 +1,53 @@
+﻿@using Microsoft.AspNetCore.Http;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <a asp-controller="Home" asp-action="index"> <title>@ViewData["Title"] - petVet</title></a>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="shortcut icon" href="~/imagens/logo.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+              <a asp-controller="Home" asp-action="Index"><h1><img src="~/imagens/logo.jpg" width="70" height="70">  PetVet <img src="~/imagens/pegadinhas.jpg" width="80%" height="70" alt="pegadinhas"></h1></a>
+                </div>
+            <div>
+                <ul>
+                    <p>
+                    <a asp-controller="Home" asp-action="Index">Início |</a>
+                    <a asp-controller="Home" asp-action="Servicos">Serviço |</a>
+                    <a asp-controller="Animal" asp-action="Cadastro">Cadastrar Serviços |</a>
+                    <a asp-controller="Animal" asp-action="Lista">Lista de Serviços |</a>
+                    <a asp-controller="Cliente" asp-action="CadastroCliente">Cadastrar Cliente |</a>
+                    <a asp-controller="Cliente" asp-action="ListaClientes">Lista de Clientes |</a>
+                    @if(Context.Session.GetInt32("id")==null){
+                    <a asp-controller="Cliente" asp-action="LoginCliente">Logar |</a>
+                    }else{
+                    <a asp-controller="Cliente" asp-action="logout">Logout</a>
+                    }
+                    </p>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - petVet - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacidade</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

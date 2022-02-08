@@ -1,0 +1,32 @@
+@model List<Cliente>
+
+    <h1>Lista de Clientes</h1>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Data Nascimento</th>
+                <th>Login</th>
+                <th>Senha</th>
+                <th>Operadores</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Cliente item in Model)
+            {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.nome</td>
+                <td>@item.dataNascimento</td>
+                <td>@item.login</td>
+                <td>@item.senha</td>
+                <td>
+                    <a href="/Cliente/ExcluirCliente?id=@item.id">Excluir</a>
+                    <a href="/Cliente/AtualizarCliente?id=@item.id">Atualizar</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>

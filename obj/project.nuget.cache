@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "LlaGrEMVaJFnfx3c2U/Wb3bxMIWJUgMkwO2VeFnhR+2Hy3FIfIXIx8nuL6bU6UzYukWbefg4fncwtO2MwXRzDA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\alves\\OneDrive\\Documentos\\atividades do senac\\mvc\\petVet\\petVet.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alves\\.nuget\\packages\\mysqlconnector\\2.1.2\\mysqlconnector.2.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

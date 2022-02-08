@@ -1,0 +1,27 @@
+@model Animal
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1 align="center">Cadastro de Serviços</h1>
+<form method="POST"  align="center" style="border: 2px solid black; border-radius: 5px ; box-shadow: black 2px 2px 1px; background-color: #bb5316d5; padding: 5px;">
+    
+        <legend>Cadastro</legend>
+    <p>
+        <label asp-for="nomeAnimal">Nome do Animal:</label>
+        <input type="text" asp-for="nomeAnimal" placeholder="Nome do Animal" required>
+    </p>
+    <p>
+        <label asp-for="idadeAnimal">Idade do Animal:</label>
+        <input type="number" asp-for="idadeAnimal" placeholder="Idade do animal" required>
+    </p>
+    <p>
+        <label asp-for="tipoAnimal">Tipo de animal:</label>
+        <select asp-for="tipoAnimal"  required>
+            <option value="gato">Gato</option>
+            <option Value="cachorro">Cachorro</option>
+            <option value="papagaio">Papagaio</option>
+        </select>
+    </p>
+    <input type="submit" value="Cadastrar" style="border-radius:5px; box-shadow: black 2px 2px 1px;">
+    
+</form>
