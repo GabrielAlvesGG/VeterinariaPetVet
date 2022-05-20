@@ -10,6 +10,8 @@ namespace petVet.Controllers
     {
     
         public IActionResult Cadastro(){
+            if(HttpContext.Session.GetInt32("id")==null)
+            return RedirectToAction("LoginCliente", "Cliente");
             return View();
         }
         [HttpPost]
@@ -21,6 +23,8 @@ namespace petVet.Controllers
         }
         public IActionResult Lista(Animal pet)
         {   
+            if(HttpContext.Session.GetInt32("id")==null)
+            return RedirectToAction("LoginCliente", "Cliente");
             AnimalRepository ar = new AnimalRepository();
            List<Animal> animal = ar.Lista();
             return View(animal);
