@@ -5,11 +5,9 @@ C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\bin\Debug\net5
 C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\bin\Debug\net5.0\petVet.runtimeconfig.json
 C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\bin\Debug\net5.0\petVet.runtimeconfig.dev.json
 C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\bin\Debug\net5.0\petVet.dll
-C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\bin\Debug\net5.0\ref\petVet.dll
 C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\bin\Debug\net5.0\petVet.pdb
 C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\bin\Debug\net5.0\petVet.Views.dll
 C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\bin\Debug\net5.0\petVet.Views.pdb
-C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\obj\Debug\net5.0\petVet.csprojAssemblyReference.cache
 C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\obj\Debug\net5.0\petVet.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\obj\Debug\net5.0\petVet.AssemblyInfoInputs.cache
 C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\obj\Debug\net5.0\petVet.AssemblyInfo.cs
@@ -18,7 +16,6 @@ C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\obj\Debug\net5
 C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\obj\Debug\net5.0\petVet.RazorAssemblyInfo.cache
 C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\obj\Debug\net5.0\petVet.RazorAssemblyInfo.cs
 C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\obj\Debug\net5.0\staticwebassets\petVet.StaticWebAssets.Manifest.cache
-C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\obj\Debug\net5.0\staticwebassets\petVet.StaticWebAssets.xml
 C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\obj\Debug\net5.0\scopedcss\bundle\petVet.styles.css
 C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\obj\Debug\net5.0\petVet.TagHelpers.input.cache
 C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\obj\Debug\net5.0\petVet.TagHelpers.output.cache
@@ -48,3 +45,5 @@ C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\obj\Debug\net5
 C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\obj\Debug\net5.0\Razor\Views\Cliente\ListaClientes.cshtml.g.cs
 C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\obj\Debug\net5.0\Razor\Views\Cliente\AtualizarCliente.cshtml.g.cs
 C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\obj\Debug\net5.0\Razor\Views\Cliente\LoginCliente.cshtml.g.cs
+C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\obj\Debug\net5.0\petVet.csproj.AssemblyReference.cache
+C:\Users\alves\OneDrive\Documentos\atividades do senac\mvc\petVet\obj\Debug\net5.0\refint\petVet.dll
