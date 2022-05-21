@@ -11,29 +11,44 @@
     
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="container">
-              <a asp-controller="Home" asp-action="Index"><h1><img src="~/imagens/logo.jpg" width="70" height="70">  PetVet <img src="~/imagens/pegadinhas.jpg" width="80%" height="70" alt="pegadinhas"></h1></a>
-                </div>
-            <div>
-                <ul>
-                    <p>
-                    <a asp-controller="Home" asp-action="Index">Início |</a>
-                    <a asp-controller="Home" asp-action="Servicos">Serviço |</a>
-                    <a asp-controller="Animal" asp-action="Cadastro">Cadastrar Serviços |</a>
-                    <a asp-controller="Animal" asp-action="Lista">Lista de Serviços |</a>
-                    <a asp-controller="Cliente" asp-action="CadastroCliente">Cadastrar Cliente |</a>
-                    <a asp-controller="Cliente" asp-action="ListaClientes">Lista de Clientes |</a>
-                    @if(Context.Session.GetInt32("id")==null){
-                    <a asp-controller="Cliente" asp-action="LoginCliente">Logar |</a>
-                    }else{
-                    <a asp-controller="Cliente" asp-action="logout">Logout</a>
-                    }
-                    </p>
-                </ul>
-            </div>
-        </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+ <a asp-controller="Home" asp-action="Index" style="text-decoration: none; color: white; text-shadow: black 1px 1px 2px;"><h1><img src="~/imagens/logo.jpg" width="70" height="70">  PetVet <img src="~/imagens/pegadinhas.jpg" width="50px" height="20px" alt="pegadinhas"></h1></a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" asp-controller="Home" asp-action="Index">Início <span class="sr-only">(Página atual)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" asp-controller="Home" asp-action="Servicos">Serviços</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" asp-controller="Cliente" asp-action="CadastroCliente">Cadastrar Cliente</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" asp-controller="Animal" asp-action="Cadastro">Cadastrar Pet</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" asp-controller="Cliente" asp-action="ListaClientes">Lista de Clientes</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" asp-controller="Animal" asp-action="Lista">Lista de Serviços</a>
+      </li>
+        
+    </ul>
+    <ul class="form-inline my-2 my-lg-0">
+    @if(Context.Session.GetInt32("id")==null){
+    <a asp-controller="Cliente" asp-action="LoginCliente"> <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button></a> 
+    }
+    else{
+      <a asp-controller="Cliente" asp-action="Logout"> <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button></a> 
+    }
+    </ul>
+  </div>
+</nav>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
